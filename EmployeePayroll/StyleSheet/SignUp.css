@@ -1,0 +1,33 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=text], input[type=password] {
+    padding: 6px 10px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.sec3 {
+    color: navy;
+}
+
+.sec4 {
+    border: 3px solid #000000;
+    background-color: White;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding-left: 40px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+footer {
+    margin-top: 0px;
+    margin-bottom:0px;
+}
