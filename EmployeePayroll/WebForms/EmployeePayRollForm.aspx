@@ -12,11 +12,12 @@
     <div class="NameClass">
           <asp:Label ID="Label4" runat="server" Text="Name"></asp:Label>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <asp:TextBox ID="TextBox1" type="text" name="Name" runat="server" Width="534px" Height="30px"></asp:TextBox>
+         <asp:TextBox ID="TextBox1" type="text" name="Name" runat="server" required="required" Width="534px" Height="30px"></asp:TextBox>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Name Start With UppersCase Min 3 Chars" ControlToValidate="TextBox1" ForeColor="Red" ValidationExpression="^[A-Z]{1}[a-z]{2,}$"></asp:RegularExpressionValidator>  
     </div>
-    <br /> 
     <div class="Profile">
-         <asp:Label ID="Label3" runat="server" Text="Profile"></asp:Label>
+         <asp:Label ID="Label3" runat="server" Text="Profile" required="required"></asp:Label>
          <asp:RadioButtonList ID="RadioButtonList2" runat="server" Width="512px" CellPadding="1" CellSpacing="1" Height="27px" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 50px">   
             
               <asp:ListItem><img src="../Assets/profile-images/Female.png" alt="" class="ListItem" /></asp:ListItem>
@@ -28,7 +29,7 @@
     <br />
         
     <div class="Gender Class">
-        <asp:Label ID="Label1" runat="server" Text="Gender" ></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Gender" required="required" ></asp:Label>
         &nbsp;&nbsp;&nbsp;
         <asp:RadioButtonList ID="RadioButtonList1" runat="server"  CellPadding="1" CellSpacing="8" Width ="209px" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 24px">
             <asp:ListItem>Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:ListItem>
@@ -37,7 +38,7 @@
     </div>
     <br />
     <div>
-         <asp:Label ID="Label2" runat="server" Text="Department" ></asp:Label>
+         <asp:Label ID="Label2" runat="server" Text="Department" required="required"  ></asp:Label>
          <asp:CheckBoxList ID="CheckBoxList1" runat="server" Width ="494px" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 10px; margin-top: 0px;">
              <asp:ListItem>HR&nbsp;&nbsp;&nbsp;</asp:ListItem>
              <asp:ListItem>Sales&nbsp;&nbsp;&nbsp;</asp:ListItem>
