@@ -3,45 +3,36 @@
     <link href="StyleSheet/Login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div
-     class="Form">
-     <div class="center" style="border-color: #000000; background-color: #CCCCCC; height: 478px; width: 347px;">
-        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign In </h2>  
-        
-        <div class="text_field">
-         
-         <p1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to continue to Employee Payroll</p1>
-     </div>
-         <br />
-    <div class="box1">
-        <asp:TextBox ID="TextBox1" runat="server" name="Email" placeholder="Email" Width="252px"></asp:TextBox>
-     
-      </div>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Required" ControlToValidate="TextBox1" ForeColor="Red"></asp:RequiredFieldValidator>
-         &nbsp;&nbsp;&nbsp;
-         <div>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Invalid EmailId" ForeColor="#FF3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-
-         </div>
-
-         
-     <div class="box2">    
-        <asp:TextBox ID="TextBox2" placeholder ="Password" runat="server" Width="256px" TextMode="Password"  ></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ControlToValidate="TextBox2" ForeColor="Red"></asp:RequiredFieldValidator>
-                  <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox2" ErrorMessage="Min 8 char, at least 1 letter and 1 number" ForeColor="#FF3300" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"></asp:RegularExpressionValidator>
-
-   </div>              
-    <div class="check_box">
-        <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" />&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="LinkButton1" runat="server" Width="30px">ForgetPassword?</asp:LinkButton>
-      </div>
-         <div class="CreateAccount">
-             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Create instead</asp:LinkButton>
-             
-             &nbsp;<asp:Button ID="Button1" runat="server" Text="Login" Height="30px" Width="107px" />
-             </div>&nbsp;&nbsp;
-         </div>
- </div>
-     
-    </asp:Content>
+   <div class="sec2">
+    <div>
+        <h4>&emsp;&emsp;&emsp; Sign in</h4>
+    </div>
+    <div>
+        <p>&ensp; to continue to Employee Payroll</p>
+    </div>
+    <div>
+       <asp:TextBox ID="TextBox1" type="text" placeholder="Email or Phone" runat="server" name="email"></asp:TextBox>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="TextBox1" ForeColor="Red">*</asp:RequiredFieldValidator>
+         &nbsp;&nbsp;
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter Correct Email" ControlToValidate="TextBox1" ForeColor="Red" ValidationExpression="[a-z0-9]+(.[a-z0-9]+)?@[a-z]+[.][a-z]{3}"></asp:RegularExpressionValidator>
+    </div>
+    <div>
+        <asp:TextBox ID="TextBox2" type="password" placeholder="Password" runat="server" name="password" TextMode="Password"></asp:TextBox>
+       <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password Required" ForeColor="Red" Display="Dynamic" ControlToValidate="TextBox2">*</asp:RequiredFieldValidator>
+       &nbsp;&nbsp;
+       <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Enter Correct Password" ControlToValidate="TextBox2" ForeColor="Red" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"></asp:RegularExpressionValidator> 
+    </div>
+    <div>
+        <asp:LinkButton ID="LinkButton1" style="text-decoration:none" runat="server">Forgot Password?</asp:LinkButton>
+    </div>
+    <div>
+        <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me"/>
+    </div>
+    <br />
+    <div>
+        <asp:Button ID="Button2" runat="server" class="btn login" OnClick="Button1_Click" Text="Create Account" />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Login" Width="71px" />
+    </div>
+    </div>
+</asp:Content>

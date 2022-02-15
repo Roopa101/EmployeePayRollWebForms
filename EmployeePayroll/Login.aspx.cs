@@ -11,7 +11,7 @@ namespace EmployeePayroll
     {
        protected void Button1_Click(object sender, EventArgs e)
         {
-           
+            Response.Redirect("SignUp.aspx");
         }
 
         protected void TextBox2_TextChanged(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace EmployeePayroll
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("SignUp.aspx");
+           
 
         }
     }
