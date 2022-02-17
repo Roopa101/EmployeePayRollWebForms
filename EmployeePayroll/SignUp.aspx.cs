@@ -33,18 +33,27 @@ namespace EmployeePayroll
             using (SqlConnection con = new SqlConnection(constr))
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "spInsert";
+                cmd.CommandText = "spInsertValue";
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Add("@fname", System.Data.SqlDbType.VarChar).Value = TextFN.Text.Trim();
                 cmd.Parameters.Add("@lname", System.Data.SqlDbType.VarChar).Value = TextLN.Text.Trim();
                 cmd.Parameters.Add("@email", System.Data.SqlDbType.VarChar).Value = TextID.Text.Trim();
                 cmd.Parameters.Add("@pswrd", System.Data.SqlDbType.VarChar).Value = TextPW.Text.Trim();
-                cmd.Parameters.Add("@cpswrd", System.Data.SqlDbType.VarChar).Value = TextCpw.Text.Trim();
                 cmd.Parameters.Add("@phno", System.Data.SqlDbType.VarChar).Value = TextMN.Text.Trim();
                 cmd.Connection = con;
                 con.Open();
-                cmd.ExecuteNonQuery();
-                Label2.Text = "Registered Successfully";
+                int i=cmd.ExecuteNonQuery();
+                if(i !=0)
+                {
+                 Label2.Text = "Registered Successfully";
+                    Label2.ForeColor = System.Drawing.Color.SteelBlue;
+                }
+                else
+                {
+                    Label2.Text = "Registered Failed!";
+                    Label2.ForeColor = System.Drawing.Color.Red;
+
+                }
             }
         }
     }
