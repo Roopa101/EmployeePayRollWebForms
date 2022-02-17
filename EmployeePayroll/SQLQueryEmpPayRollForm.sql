@@ -25,3 +25,4 @@ CREATE TABLE EmployeeLogin
 	LoginTime datetime default sysdatetime()
 );
 
+select *from EmployeeLogin
