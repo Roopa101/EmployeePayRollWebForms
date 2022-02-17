@@ -29,25 +29,27 @@
         <asp:TextBox ID="TextCpw" runat="server" Name="Confirm Password" placeholder="Confirm Password" required="required" ></asp:TextBox>   
         <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords does not match" ControlToCompare="TextPW" ControlToValidate="TextCpw" ForeColor="Red"></asp:CompareValidator>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br />
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Min 8 char, at least 1 letter and 1 number" ControlToValidate="TextPW" ForeColor="Red" ValidationExpression="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"></asp:RegularExpressionValidator>
     &nbsp;
     </div>
     <div>
-        <asp:CheckBox ID="CheckBox2" runat="server"  /><asp:Label ID="Label1" runat="server" Text="Show Password"></asp:Label>
+        <asp:CheckBox ID="CheckBox2" runat="server"  /><asp:Label ID="Label1" runat="server" Text="Show Password"/>
+
     </div>
     <br />
     <div>
         <asp:TextBox ID="TextMN" placeholder="Mobile Number" type="text" name="Number" runat="server" required="required" Width="421px"></asp:TextBox>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextMN" ErrorMessage="Invalid Number" ForeColor="Red" ValidationExpression="^[1-9][0-9]{1,2}[ ][0-9]{10}$"></asp:RegularExpressionValidator>
+<%--        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextMN" ErrorMessage="Invalid Number" ForeColor="Red" ValidationExpression="^[1-9][0-9]{1,2}[ ][0-9]{10}$"></asp:RegularExpressionValidator>--%>
     </div>
         <br />
         <br />
     <div >
         <asp:Button ID="Button1" runat="server"  class="btn signin" Text="Sign instead"  Width ="123px" OnClick="Button1_Click"/>
           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" class="btn btn-primary" Text="Next"  Width="105px" />
+        <asp:Button ID="Button3" runat="server" class="btn btn-primary" Text="Next"  Width="105px" OnClick="Button3_Click" />
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </div>
     </div>
 </asp:Content>
