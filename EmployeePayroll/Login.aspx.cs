@@ -26,6 +26,7 @@ namespace EmployeePayroll
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
         }
 
@@ -44,8 +45,8 @@ namespace EmployeePayroll
             var datareader = com.ExecuteReader();
             if (datareader != null)
             {
-                GridView1.DataSource = datareader;
-                GridView1.DataBind();
+                Session["users"] = datareader;
+                Response.Redirect("HomePage.aspx");
             }
             else
             {

@@ -33,7 +33,6 @@
         <asp:Button ID="Button2" runat="server" class="btn login" OnClick="Button1_Click" Text="Create Account" />
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Login" Width="71px" OnClick="Button1_Click1" />
-        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-    </div>
+<%--        <asp:GridView ID="GridView1" runat="server"></asp:GridView>   </div>--%>
     </div>
 </asp:Content>
