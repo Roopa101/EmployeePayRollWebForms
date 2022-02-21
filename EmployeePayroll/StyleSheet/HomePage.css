@@ -1,0 +1,44 @@
+﻿.Gridview1 {
+
+    align-items: center;
+    text-align: center;
+}
+.Gridview2 {
+    align-items: center;
+    text-align: unset;
+    margin-left:10px;
+    margin-right:150px;
+    padding-right:50px;
+    padding-left:100px;
+}
+
+.AddUser{
+    margin-right:05px;
+    margin-left:130px;
+
+    
+}
+.Emp {
+    top: 156px;
+    left: 188px;
+    width: 217px;
+    height: 37px;
+    margin-left:150px;
+    margin-right:25px;
+}
+
+.btn-btn1 {
+    float: right;
+    background-color: #82A70C;
+    margin-top: 0px;
+    margin-right: 100px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+    .btn-btn1:hover {
+        box-shadow: inset 350px 0 0 0 lightgrey;
+        color: black;
+    }

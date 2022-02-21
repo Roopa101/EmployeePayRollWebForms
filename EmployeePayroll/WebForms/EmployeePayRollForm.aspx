@@ -18,16 +18,15 @@
     </div>
     <div class="Profile">
          <asp:Label ID="Label3" runat="server" Text="Profile" required="required"></asp:Label>
-         <asp:RadioButtonList ID="RadioButtonList2" runat="server" Width="512px" CellPadding="1" CellSpacing="1" Height="27px" RepeatDirection="Horizontal" RepeatLayout="Flow" style="margin-left: 50px">   
-            
-              <asp:ListItem><img src="../Assets/profile-images/Female.png" alt="" class="ListItem" /></asp:ListItem>
-              <asp:ListItem><img src="../Assets/profile-images/Male2.png" alt="" class="ListItem" /></asp:ListItem>
-              <asp:ListItem><img src="../Assets/profile-images/Female1.png" alt="" class="ListItem" /></asp:ListItem>
-              <asp:ListItem><img src="../Assets/profile-images/Male.png" alt="" class="ListItem" /></asp:ListItem>
-              </asp:RadioButtonList>
-    </div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <asp:RadioButtonList ID="RadioButtonList2"  runat="server" Width="512px" CellPadding="1" CellSpacing="1" Height="27px" RepeatDirection="Horizontal" RepeatLayout="Flow">
+                 <asp:ListItem Value="../Assets/profile-images/Female.png">&emsp;<img src="../Assets/profile-images/Female.png" alt="avatar" class="ListItem" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Male.png">&emsp;<img src="../Assets/profile-images/Male.png" alt="avatar" class="ListItem" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Female1.png">&emsp;<img src="../Assets/profile-images/Female1.png" alt="avatar" class="ListItem" /></asp:ListItem>
+                 <asp:ListItem Value="../Assets/profile-images/Male1.png">&emsp;<img src="../Assets/profile-images/Male1.png" alt="avatar" class="ListItem" /></asp:ListItem>
+             </asp:RadioButtonList>
     <br />
-        
+   <br />     
     <div class="Gender Class">
         <asp:Label ID="Label1" runat="server" Text="Gender" required="required" ></asp:Label>
         &nbsp;&nbsp;&nbsp;
@@ -83,7 +82,7 @@
     <br />
     <br />
         <asp:Button ID="Button1" runat="server" class="btn btn-outline-secondary" Text="Cancel" Width="180px" Height="50px" BackColor="#E2E2E2" BorderColor="#969696" ForeColor="#42515F" />&emsp;&emsp;&emsp;&emsp;&ensp;
-        <asp:Button ID="Button2" runat="server" class="btn btn-outline-secondary" Text="Submit" Width="180px" Height="50px" BackColor="#E2E2E2" BorderColor="#969696" ForeColor="#42515F" />&emsp;
+        <asp:Button ID="Button2" runat="server" class="btn btn-outline-secondary" Text="Submit" Width="180px" Height="50px" BackColor="#E2E2E2" BorderColor="#969696" ForeColor="#42515F" OnClick="Button2_Click" />&emsp;
         <asp:Button ID="Button3" runat="server" class="btn btn-outline-secondary" Text="Reset" Width="180px" Height="50px" BackColor="#E2E2E2" BorderColor="#969696" ForeColor="#42515F" />
     </div>
     <br />
