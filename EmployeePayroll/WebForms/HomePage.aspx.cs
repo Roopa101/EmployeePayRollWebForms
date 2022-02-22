@@ -16,7 +16,7 @@ namespace EmployeePayroll
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void GridView3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

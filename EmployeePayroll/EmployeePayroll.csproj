@@ -109,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Assets\images\delete-button-png-28580 %281%29 %281%29.png" />
+    <Content Include="Assets\images\edit-icon-png-3607 %281%29 %281%29 %281%29.png" />
+    <Content Include="Assets\images\logo.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -266,7 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
