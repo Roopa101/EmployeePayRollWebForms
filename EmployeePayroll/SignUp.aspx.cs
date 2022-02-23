@@ -33,7 +33,7 @@ namespace EmployeePayroll
             using (SqlConnection con = new SqlConnection(constr))
             {
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "spInsertValue";
+                cmd.CommandText = "sp_Register";
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Add("@fname", System.Data.SqlDbType.VarChar).Value = TextFN.Text.Trim();
                 cmd.Parameters.Add("@lname", System.Data.SqlDbType.VarChar).Value = TextLN.Text.Trim();
@@ -42,18 +42,16 @@ namespace EmployeePayroll
                 cmd.Parameters.Add("@phno", System.Data.SqlDbType.VarChar).Value = TextMN.Text.Trim();
                 cmd.Connection = con;
                 con.Open();
-                int i=cmd.ExecuteNonQuery();
-                if(i !=0)
+                int ReturnCode = (int)cmd.ExecuteScalar();
+                if (ReturnCode == -1)
                 {
-                 Label2.Text = "Registered Successfully";
-                    Label2.ForeColor = System.Drawing.Color.SteelBlue;
+                    Label2.Text = "Email Id already Exists, Please use another Email";
                 }
                 else
                 {
-                    Label2.Text = "Registered Failed!";
-                    Label2.ForeColor = System.Drawing.Color.Red;
-
+                    Response.Redirect("Login.aspx");
                 }
+                con.Close();
             }
         }
     }

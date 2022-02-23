@@ -3,7 +3,7 @@
     <link href="StyleSheet/Login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="sec2">
+    <div class="sec2">
     <div>
         <h4>&emsp;&emsp;&emsp; Sign in</h4>
     </div>
@@ -29,10 +29,15 @@
         <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me"/>
     </div>
     <br />
-    <div>
-        <asp:Button ID="Button2" runat="server" class="btn login" OnClick="Button1_Click" Text="Create Account" />
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Login" Width="71px" OnClick="Button1_Click1" />
-<%--        <asp:GridView ID="GridView1" runat="server"></asp:GridView>   </div>--%>
+    <div style="width: 514px">
+        <asp:Button ID="Button2" runat="server" class="btn login" OnClick="Button1_Click" Text="Create Account" Width="138px" />
+        &nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" class="btn btn-primary" Text="Login" Width="73px" OnClick="Button1_Click1" />
+    </div>
+       <div>
+           <asp:Label ID="message" runat="server"  ForeColor="Red">
+           </asp:Label>
+           <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+       </div>
     </div>
 </asp:Content>

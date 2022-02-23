@@ -2,6 +2,8 @@
 
     align-items: center;
     text-align: center;
+    margin-left: 150px;
+    margin-right:15px;
 }
 .Gridview2 {
     align-items: center;
@@ -13,8 +15,10 @@
 }
 
 .AddUser{
-    margin-right:05px;
-    margin-left:130px;
+    margin-right:190px;
+    margin-left:15px;
+    margin-top:0px;
+    margin-bottom:50px;
 
     
 }

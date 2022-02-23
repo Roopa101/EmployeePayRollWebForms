@@ -3,12 +3,17 @@
     <link href="../StyleSheet/HomePage.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="AddUser">
-    </div>   
     <br />
-        <asp:Button ID="Button1" class="btn btn-btn1" runat="server" Text="+ Add User" OnClick="Button1_Click" ClientIDMode="Static" />
-        <div>
-        <asp:GridView ID="GridView3" CssClass="Gridview1" runat="server" OnSelectedIndexChanged="GridView3_SelectedIndexChanged" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" Width="868px" HorizontalAlign="Center" OnRowDeleting="GridView3_RowDeleting" DataKeyNames="id">
+    <br />
+  <div class="Emp">
+        <asp:Label ID="Label1" runat="server" Text="Employee Details" Height="50px" Width="220px" Font-Bold="True" ForeColor="#42515F" Font-Size="Larger"></asp:Label>
+      </div>
+    <div class="AddUser">
+        
+        <asp:Button ID="Button1" class="btn btn-btn1" runat="server" Text="+ Add User" OnClick="Button1_Click" Width="148px" />
+      </div>   
+       <div >
+        <asp:GridView ID="GridView3" CssClass="Gridview1" runat="server" OnSelectedIndexChanged="GridView3_SelectedIndexChanged" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" Width="1097px" HorizontalAlign="Center" OnRowDeleting="GridView3_RowDeleting" DataKeyNames="id">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
